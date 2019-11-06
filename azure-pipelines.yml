@@ -1,18 +1,28 @@
 # Maven
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
+- trigger:
 - master
 
-pool:
+- pool:
   vmImage: 'ubuntu-latest'
 
-steps:
+- steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: '/agiles_ahorcado/pom.xml'
+    mavenPomFile: '/Agiles2019/agiles_ahorcado/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
