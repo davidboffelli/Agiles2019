@@ -129,5 +129,15 @@ public class Juego {
 			return false;
 		}
 	}
+	
+	public boolean juegoGanado() {
+		if(this.getPalabraFija().equalsIgnoreCase(String.valueOf(this.getEstadoPalabra()))){
+			return true;
+		}
+		else {
+			return false;
+		}
+					
+	}
 
 }

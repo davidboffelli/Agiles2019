@@ -285,4 +285,36 @@ public class TestRelease1 {
 		boolean resultado = juego.arriesgarPalabra("ArthasMenethil");
 		assertEquals(false, resultado);
 	}
+	
+	@Test
+	public void testVictoria() {
+		GeneradorPalabra gp = new GeneradorPalabra();
+		gp.setPalabraFija("MARADONA");
+		Juego juego = new Juego(gp);
+		juego.validarLetra('M');
+		juego.validarLetra('A');
+		juego.validarLetra('R');
+		juego.validarLetra('A');
+		juego.validarLetra('D');
+		juego.validarLetra('O');
+		juego.validarLetra('N');
+		juego.validarLetra('A');
+		boolean respuesta=juego.juegoGanado();
+		assertEquals(true, respuesta);
+	}
+	
+	@Test
+	public void testDerrota() {
+		GeneradorPalabra gp = new GeneradorPalabra();
+		gp.setPalabraFija("MARADONA");
+		Juego juego = new Juego(gp);
+		juego.validarLetra('F');
+		juego.validarLetra('G');
+		juego.validarLetra('H');
+		juego.validarLetra('I');
+		juego.validarLetra('J');
+		juego.validarLetra('K');
+		int respuesta=juego.getVidas();
+		assertEquals(0, respuesta);
+	}
 }
