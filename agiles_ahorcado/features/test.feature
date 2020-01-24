@@ -7,7 +7,7 @@ Feature: Ahorcado Maradona
     And user keeps putting right letters until the word is completed
     Then success message is displayed
     
-@perfectLose
+	@perfectLose
 
   Scenario: Verification of perfect lose
     Given user is on gamepage
@@ -15,14 +15,14 @@ Feature: Ahorcado Maradona
     And user keeps putting wrong letters until lose
     Then failed message is displayed
 
-@imperfectWin
+		@imperfectWin
 
   Scenario: Verification of imperfect win
     Given user is on gamepage
     When user puts right and wrong letters until the word is completed
     Then success message is displayed
     
-@imperfectLose
+	@imperfectLose
 
   Scenario: Verification of imperfect lose
     Given user is on gamepage
