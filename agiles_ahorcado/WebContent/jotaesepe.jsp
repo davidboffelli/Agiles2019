@@ -10,7 +10,7 @@
 AHORCADO MARADONA
 <form action="${pageContext.request.contextPath}/JuegoServlet" method="post">
 	<div>
-		<label type="text">Arriesgar letra: </label>
+		<label type="text"> Arriesgar letra: </label>
 		<input type="text" id="letraIngresada" name="letraIngresada"></input>
 		<button type="submit">Ingresar</button>
 	</div>
@@ -28,7 +28,7 @@ AHORCADO MARADONA
 		<label type="text">Vidas: ${vidas}</label>
 	</div>
 	<div>
-		<label id="juegoGanado" type="text">${juegoFinalizado}</label>
+		<label id="juegoGanado" name="juegoGanado" type="text">${juegoFinalizado}</label>
 	</div>
 </form>
 </body>
