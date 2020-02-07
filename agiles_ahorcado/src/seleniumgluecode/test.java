@@ -19,7 +19,7 @@ public class test {
     public static WebDriver driver;
     @Given("^user is on gamepage$")
     public void user_is_on_homepage() throws Throwable {     
-    	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32 (1)\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "./externals/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://localhost:8080/agiles_ahorcado/jotaesepe.jsp");
         //driver.manage().timeouts().implicitlyWait(100000, TimeUnit.SECONDS);
