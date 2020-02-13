@@ -8,7 +8,6 @@
 	<packaging>jar</packaging>
 	<name>Cucumber_Selenium</name>
 	<url>http://maven.apache.org</url>
-	<build><testSourceDirectoy>{basedir}/src/unit_testing</testSourceDirectoy></build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
